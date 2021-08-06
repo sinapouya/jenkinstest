@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-                sh "/usr/share/maven clean"
+                sh "mvn clean"
             }
         }
         stage('--test--') {
             steps {
-                sh "/usr/share/maven test"
+                sh "mvn test"
             }
         }
         stage('--package--') {
             steps {
-                sh "/usr/share/maven package"
+                sh "mvn package"
             }
         }
     }
